@@ -22,19 +22,19 @@
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="index.html">Joli Admin</a>
+                        <a href="index.html">Luis Acuña Admin</a>
                         <a href="#" class="x-navigation-control"></a>
                     </li>
                     <li class="xn-profile">
                         <a href="#" class="profile-mini">
-                            <img src="assets/images/users/avatar.jpg" alt="John Doe"/>
+                            {{ image("assets/images/users/avatar.jpg", "alt": "Luis Acuña") }}
                         </a>
                         <div class="profile">
                             <div class="profile-image">
-                                <img src="assets/images/users/avatar.jpg" alt="John Doe"/>
+                                {{ image("assets/images/users/avatar.jpg", "alt": "Luis Acuña") }}
                             </div>
                             <div class="profile-data">
-                                <div class="profile-data-name">John Doe</div>
+                                <div class="profile-data-name">Luis Acuña Admin</div>
                                 <div class="profile-data-title">Web Developer/Designer</div>
                             </div>
                             <div class="profile-controls">
