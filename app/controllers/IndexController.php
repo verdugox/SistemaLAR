@@ -5,12 +5,31 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-        $this->assets
-                ->addCss("bower_components/bootstrap/dist/css/bootstrap.min.css");
-        $this->assets
-                ->addJs("bower_components/angular/angular.min.js")
-                ->addJs("bower_components/angular-route/angular-route.min.js");
+
     }
 
-}
+    public function loginAction()
+    {
 
+      $usuarioP = new Usuario();
+      $vNombreUsuario = $this->request->getPost("vNombreUsuario");
+      $vClaveUsuario = $this->request->getPost("vClaveUsuario");
+
+      $m = new MongoClient();
+      $bd = $m->SistemaDentalZL;
+      $colección = $bd->usuario;
+      $cursor = $colección->find();
+      foreach ($cursor as $usuario) {
+        if ($usuario["vNombreUsuario"] != $vNombreUsuario) {
+            throw new Exception("Usuario Incorrecto");
+        } else if ($usuario["vClaveUsuario"] != $vClaveUsuario) {
+            throw new Exception("Clave Incorrecta");
+        } else {
+            $this->session->set("vNombreUsuario", $usuario["vNombreUsuario"]);
+            $this->view->pick('index/dashboard');
+        }
+      }
+
+   }
+
+}

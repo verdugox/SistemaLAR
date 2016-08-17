@@ -1,6 +1,6 @@
 <?php
 
-namespace DenchikBY\MongoDB;
+-- namespace DenchikBY\MongoDB;
 
 use DenchikBY\MongoDB\Query\Builder;
 use MongoDB\BSON\ObjectID;
@@ -23,7 +23,7 @@ class Model extends \MongoDB\Collection
      */
     public static function init($attributes = [])
     {
-        $model = (new static(Di::getDefault()->get('mongo'), static::getDbName(), static::getSource()));
+        $model = (new static(Di::getDefault()->get('mongo'), static::getDbName('SistemaLAR'), static::getSource()));
         if (count($attributes) > 0) {
             $model->fill($attributes);
         }

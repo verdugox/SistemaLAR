@@ -1,19 +1,19 @@
-       
+
         <div class="login-container lightmode">
-        
+
             <div class="login-box animated fadeInDown">
                 <div class="login-logo"></div>
                 <div class="login-body">
                     <div class="login-title"><strong>Inicia Sesión</strong> con tu cuenta</div>
-                    <form action="index.html" class="form-horizontal" method="post">
+                    <form action="index/login" class="form-horizontal" method="post">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="E-mail"/>
+                            <input id="vNombreUsuario" name="vNombreUsuario" type="text" class="form-control" placeholder="Usuario"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" class="form-control" placeholder="Password"/>
+                            <input id="vClaveUsuario" name="vClaveUsuario" type="password" class="form-control" placeholder="Password"/>
                         </div>
                     </div>
                     <div class="form-group">
@@ -32,7 +32,7 @@
                         <div class="col-md-4">
                             <button class="btn btn-info btn-block btn-facebook"><span class="fa fa-facebook"></span> Facebook</button>
                         </div>
-                        <div class="col-md-4">                            
+                        <div class="col-md-4">
                             <button class="btn btn-info btn-block btn-google"><span class="fa fa-google-plus"></span> Google</button>
                         </div>
                     </div>
@@ -52,10 +52,5 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
-
-
-
-
