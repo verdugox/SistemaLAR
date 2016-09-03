@@ -1,5 +1,3 @@
-     <!-- Mainly css -->
-
-     <!-- CSS INCLUDE -->
-     {{ stylesheet_link("css/theme-default.css") }}
-     <!-- EOF CSS INCLUDE -->
+<!-- CSS INCLUDE -->
+{{ stylesheet_link("css/theme-brown.css") }}
+<!-- EOF CSS INCLUDE -->
