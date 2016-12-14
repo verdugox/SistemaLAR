@@ -12,7 +12,7 @@
     {{ javascript_include("js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js") }}
     {{ javascript_include("js/plugins/scrolltotop/scrolltopcontrol.js") }}
     {{ javascript_include("js/plugins/morris/raphael-min.js") }}
-    {{ javascript_include("js/plugins/morris/morris.min.js") }}
+
     {{ javascript_include("js/plugins/rickshaw/d3.v3.js") }}
     {{ javascript_include("js/plugins/rickshaw/rickshaw.min.js") }}
     {{ javascript_include("js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js") }}
@@ -29,7 +29,7 @@
     {{ javascript_include("js/settings.js") }}
     {{ javascript_include("js/plugins.js") }}
     {{ javascript_include("js/actions.js") }}
-    {{ javascript_include("js/demo_dashboard.js") }}
+
 
     <!-- END TEMPLATE -->
 <!-- END SCRIPTS -->
