@@ -25,14 +25,14 @@
         </li>
         <li class="xn-title">Navigation</li>
         <li class="active">
-            <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+            <a href="{{ url("Index/dashboard") }}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
         </li>
         <li class="xn-openable">
-            <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Pages</span></a>
+            <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Modules</span></a>
             <ul>
-                <li><a href="pages-gallery.html"><span class="fa fa-image"></span> Gallery</a></li>
+                <li><a href="{{ url("Patient") }}"><span class="fa fa-users"></span> Patients</a></li>
                 <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
-                <li><a href="pages-address-book.html"><span class="fa fa-users"></span> Address Book</a></li>
+                <li><a href="pages-address-book.html"><span class="fa fa-image"></span> Address Book</a></li>
                 <li class="xn-openable">
                     <a href="#"><span class="fa fa-clock-o"></span> Timeline</a>
                     <ul>

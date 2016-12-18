@@ -5,7 +5,7 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-
+       
     }
 
     public function loginAction()
@@ -14,9 +14,7 @@ class IndexController extends ControllerBase
       $usuarioP = new Usuario();
       $vNombreUsuario = $this->request->getPost("vNombreUsuario");
       $vClaveUsuario = $this->request->getPost("vClaveUsuario");
-
-      $m = new MongoClient();
-      $bd = $m->SistemaDentalZL;
+      $bd = ($this->mongo);
       $colección = $bd->usuario;
       $cursor = $colección->find();
       foreach ($cursor as $usuario) {
@@ -31,5 +29,8 @@ class IndexController extends ControllerBase
       }
 
    }
+
+
+
 
 }

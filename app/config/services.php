@@ -75,6 +75,27 @@ $di->setShared('modelsMetadata', function () {
     return new MetaDataAdapter();
 });
 
+//Conexion General de Mongo DB //
+$di->set('mongo', function() {
+      $mongo = new \MongoClient();
+      return $mongo->selectDb("SistemaDentalZL");
+    }, true);
+
+$di->set('collectionManager', function(){
+      return new Phalcon\Mvc\Collection\Manager();
+    }, true);
+
+//-----------------------------//
+/*    $di->set('MongoDB', function () use ($config) {
+          $mongo = new \MongoClient("mongodb://" .
+             $config->database->mongo->username . "root"
+             $config->database->mongo->password . "aries1990" .
+             $config->database->mongo->host,array("SistemaDentalZL" => $config->database->mongo->dbname)
+          );
+          return $mongo->selectDb($config->database->mongo->dbname);
+      }, TRUE);
+*/
+
 /**
  * Register the session flash service with the Twitter Bootstrap classes
  */

@@ -1,4 +1,10 @@
 <!-- START SCRIPTS -->
+
+    <!-- ANGULAR JS 2.0 -->
+
+    {{ javascript_include("bower_components/angular/angular.min.js") }}
+    {{ javascript_include("bower_components/angular-route/angular-route.min.js") }}
+
     <!-- START PLUGINS -->
 
     {{ javascript_include("js/plugins/jquery/jquery.min.js") }}

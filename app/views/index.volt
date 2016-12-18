@@ -11,5 +11,9 @@
     </head>
     <body>
        {{ content() }}
+
+       <!-- START SCRIPTS -->
+         {% include "layouts/footer.volt" %}
+       <!-- END SCRIPTS -->
     </body>
 </html>
