@@ -24,14 +24,14 @@
             </div>
         </li>
         <li class="xn-title">Navigation</li>
-        <li class="active">
+        <li>
             <a href="{{ url("Index/dashboard") }}"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
         </li>
         <li class="xn-openable">
-            <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Modules</span></a>
+            <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Modulos</span></a>
             <ul>
-                <li><a href="{{ url("Patient") }}"><span class="fa fa-users"></span> Patients</a></li>
-                <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
+                <li><a href="{{ url("Patient") }}"><span class="fa fa-users"></span>Lista Pacientes</a></li>
+                <li><a href="{{ url("Patient") }}"><span class="fa fa-user"></span>Pacientes Nuevos</a></li>
                 <li><a href="pages-address-book.html"><span class="fa fa-image"></span> Address Book</a></li>
                 <li class="xn-openable">
                     <a href="#"><span class="fa fa-clock-o"></span> Timeline</a>

@@ -75,11 +75,22 @@ $di->setShared('modelsMetadata', function () {
     return new MetaDataAdapter();
 });
 
-//Conexion General de Mongo DB //
+//CCONEXION LOCAL MONGODB//
+/*
 $di->set('mongo', function() {
       $mongo = new \MongoClient();
       return $mongo->selectDb("SistemaDentalZL");
     }, true);
+*/
+
+
+// CONEXION REMOTA MONGODB //
+$di->set('mongo', function(){
+
+      $mongo = new \MongoClient("mongodb://verdugox123:aries1990@ds139278.mlab.com:39278/sistemadentalzl2017");
+      return $mongo->selectDb("sistemadentalzl2017");
+    }, true);
+
 
 $di->set('collectionManager', function(){
       return new Phalcon\Mvc\Collection\Manager();
