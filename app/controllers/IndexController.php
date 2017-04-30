@@ -22,7 +22,7 @@ class IndexController extends ControllerBase {
                 'sort' => ['vNombreUsuario' => -1],
             ];
             $query = new MongoDB\Driver\Query($filter, $options);
-            $usuarios = $bd->executeQuery('SistemaDentalZL.usuario', $query);
+            $usuarios = $bd->executeQuery('sistemadentalzl2017.usuario', $query);
             
             foreach ($usuarios as $usuario) {
                 if ($usuario->vNombreUsuario != $vNombreUsuario) {

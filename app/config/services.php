@@ -76,15 +76,17 @@ $di->setShared('modelsMetadata', function () {
 });
 
 //CCONEXION LOCAL MONGODB//
+////CONEXION LOGAL CON MONGO DRIVE MANAGER PARA VERSION PHP7.0 
+
+//$di->set('manager', function() {
+//
+//
+//      $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+//      return $manager;
+//
+//    }, true);
+    
 //CONEXION LOGAL CON MONGOCLIENT PARA VERSION PHP5.6 Y LIBRERIA 1.0
-$di->set('manager', function() {
-
-
-      $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
-      return $manager;
-
-    }, true);
-
     //$di->set("mongo",function () {
       //         $manager = new MongoDB\Driver\Manager("mongodb://localhost:27017");
                //somehow selectDB('invoicing') ?
@@ -93,13 +95,16 @@ $di->set('manager', function() {
 
 
 // CONEXION REMOTA MONGODB //
-/*$di->set('mongo', function(){
+$di->set('manager', function(){
 
-      $mongo = new \MongoClient("mongodb://verdugox123:aries1990@ds139278.mlab.com:39278/sistemadentalzl2017");
-      return $mongo->selectDb("sistemadentalzl2017");
+      $manager = new MongoDB\Driver\Manager("mongodb://verdugox123:aries1990@ds139278.mlab.com:39278/sistemadentalzl2017");
+      return $manager;
     }, true);
-*/
 
+
+    
+    
+    
 $di->set('collectionManager', function(){
       return new Phalcon\Mvc\Collection\Manager();
     }, true);
