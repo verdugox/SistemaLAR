@@ -35,11 +35,11 @@ class Usuario extends Model
         return $this->dActivo;
     }
 
-    public function getDFechaRegistro() {
+    public function getDFechaRegistro(){
         return $this->dFechaRegistro;
     }
 
-    public function getDFechaModifica() {
+    public function getDFechaModifica(){
         return $this->dFechaModifica;
     }
 
